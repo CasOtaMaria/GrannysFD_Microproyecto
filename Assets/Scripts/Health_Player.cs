@@ -11,7 +11,6 @@ public class Health_Player : MonoBehaviour
         health = maxHealth;
     }
 
-    // Update is called once per frame
     public void TakeDamage(int damageTaken)
     {
         health -= damageTaken;

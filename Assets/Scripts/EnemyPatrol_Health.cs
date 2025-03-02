@@ -1,20 +1,28 @@
 using UnityEngine;
 
 public class EnemyPatrol_Health : MonoBehaviour
-{
-    public int damage = 10;
-    public Health_Player healthPlayer; //para poder acceder desde este codigo
- 
+{  
+    public float maxHealth = 20f;
+    public float health;
+    public Enemy_Patrol enemyPatrol;
+    
     void Start()
     {
-        
+        health = maxHealth;
     }
-
-    private void OnCollisionEnter(Collision collision) //Para dañar al jugador si se chocan
+    void Update()
     {
-        if (collision.gameObject.tag == "Player") //Comprueba que choca con el jugador
+    }
+    
+    public void TakeDamage(float damageTaken)
+    {
+        health =- damageTaken;
+        if (health <= 0)
         {
-            healthPlayer.TakeDamage(damage);
+            //enemyPatrol.CreateCoin();
+            Destroy(gameObject);
         }
     }
+
+
 }
