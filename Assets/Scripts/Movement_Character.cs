@@ -4,8 +4,10 @@ public class Movement_Character : MonoBehaviour
 {
     public float velocidad;
     public Rigidbody rbCharacter;
-
     private Vector2 inputMov; //El movimiento del personaje sera 2D (ejes x,z)
+
+    //public GameObject coinPrefab;
+    public CoinManager coinManager;
 
     private void Start()
     {
@@ -19,6 +21,15 @@ public class Movement_Character : MonoBehaviour
         inputMov.Normalize(); //Para que sea un vector unitario (que no aumente la velocidad al moverse en diagonal)
 
         rbCharacter.linearVelocity = new Vector3(inputMov.x*velocidad, 0f, inputMov.y*velocidad); //0f porque no quiero que salte en ningún momento
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            coinManager.coinCount++;
+        }
     }
 }
     

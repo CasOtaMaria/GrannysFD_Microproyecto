@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Enemy_Patrol : MonoBehaviour
 {
-    public Transform pointA;
-    public Transform pointB;
-    public Transform targetPoint;
     public float speed;
     public float health = 20f;
 
-   
+    public Transform pointA;
+    public Transform pointB;
+    public Transform targetPoint;
+
+    public GameObject coin;
+  
    void Start()
    {
        targetPoint = pointA; //Empiezo en el punto A
@@ -25,7 +27,17 @@ public class Enemy_Patrol : MonoBehaviour
         Vector3 targetPosition = new Vector3(targetPoint.position.x, 0.5f, targetPoint.position.z);
         //Pongo 0.5f porque si no se hunde en el suelo
         transform.position = Vector3.MoveTowards(transform.position, targetPosition , speed * Time.deltaTime);
+
+        if (health == 0)
+        {
+            EnemyPatrolDeath();
+        }
    }
 
+    public void EnemyPatrolDeath()
+    {
+        Destroy(gameObject);
+        Instantiate(coin, targetPoint.position, targetPoint.rotation);
+    }
     
 }
