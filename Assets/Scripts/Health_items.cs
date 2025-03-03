@@ -5,16 +5,18 @@ public class Health_items : MonoBehaviour
     public int candy = 10;
     public int tea = 15;
     public Health_Player healthPlayer;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Shop shop;
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1)&& (shop.numCandy >0))
         {
             healthPlayer.TakeHealth(candy);
         }

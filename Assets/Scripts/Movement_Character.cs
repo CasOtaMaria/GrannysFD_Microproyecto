@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class Movement_Character : MonoBehaviour
 {
     public float velocidad;
