@@ -22,7 +22,6 @@ public class Health_Player : MonoBehaviour
 
     public void TakeHealth(int healthTaken) //REVISAR
     {
-
         if (health + healthTaken > 100)
         {
             health = maxHealth;

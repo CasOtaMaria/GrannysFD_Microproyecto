@@ -16,15 +16,17 @@ public class Health_items : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha1)&& (shop.numCandy >0))
+        if (Input.GetKeyDown(KeyCode.Q) && (shop.numCandy >0))
         {
+            shop.numCandy--;
             healthPlayer.TakeHealth(candy);
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
+            //shop.numTeaPlayerT--;
             healthPlayer.TakeHealth(tea);
         }
-
+        //Input.GetKeyDown(KeyCode.Q);
     }
 
 }
