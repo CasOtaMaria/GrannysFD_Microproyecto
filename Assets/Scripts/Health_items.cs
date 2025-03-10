@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Health_items : MonoBehaviour
 {//SOLO PRUEBA
-    public int candy = 10;
-    public int tea = 15;
+    public int candy = 5;
+    public int tea = 10;
     public Health_Player healthPlayer;
 
     public Shop shop;
@@ -16,17 +16,16 @@ public class Health_items : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && (shop.numCandy >0))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && (shop.numCandy >0))
         {
             shop.numCandy--;
             healthPlayer.TakeHealth(candy);
         }
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2) && (shop.numTea > 0))
         {
-            //shop.numTeaPlayerT--;
+            shop.numTea--;
             healthPlayer.TakeHealth(tea);
-        }
-        //Input.GetKeyDown(KeyCode.Q);
+        }       
     }
 
 }

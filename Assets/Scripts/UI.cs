@@ -9,11 +9,12 @@ public class UI : MonoBehaviour
     public Health_Player healthPlayer;
     //MONEDAS
     public TextMeshProUGUI coinsText;
-    public CoinManager coinManager;
-    //public GameObject coinPrefab;
+    public GameManager coinManager;
+
     //ITEMS
     public Shop shop; //Para mostrar los caramelos en la tienda y no la interfaz
     public TextMeshProUGUI candy;
+    public TextMeshProUGUI tea;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class UI : MonoBehaviour
         coinsText.text = coinManager.coinCount.ToString();
 
         candy.text = shop.numCandy.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
+        tea.text = shop.numTea.ToString();  
     }
 
 }

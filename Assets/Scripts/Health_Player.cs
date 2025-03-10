@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health_Player : MonoBehaviour
 {
@@ -17,10 +18,11 @@ public class Health_Player : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
-    public void TakeHealth(int healthTaken) //REVISAR
+    public void TakeHealth(int healthTaken)
     {
         if (health + healthTaken > 100)
         {

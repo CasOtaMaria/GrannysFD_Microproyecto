@@ -6,7 +6,7 @@ public class Movement_Character : MonoBehaviour
     public Rigidbody rbCharacter;
     private Vector2 inputMov; //El movimiento del personaje sera 2D (ejes x,z)
 
-    public CoinManager coinManager;
+    public GameManager coinManager;
 
     public Transform bulletsSpawn;
     public GameObject bulletsPrefab;
