@@ -2,9 +2,23 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    public float damage = 5;
+    public float damage;
     public EnemyPatrol_Health enemyPatrolHealth;
-   
+    public GameManager inventoryPlayer;
+
+    /*
+    void Update()
+    {
+        if ((inventoryPlayer.numBullets01 == 1) && (inventoryPlayer.numBullets02==0))
+        {
+            damage = 5;
+        }
+        if ((inventoryPlayer.numBullets01 == 1) && (inventoryPlayer.numBullets02 == 1))
+        {
+            damage = 8;
+        }
+    }*/
+
     void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Player")) //para evitar que la bala se destruya nada mas disparar

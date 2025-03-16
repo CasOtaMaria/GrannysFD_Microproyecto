@@ -6,9 +6,10 @@ public class Enemy_Alert : MonoBehaviour
     public float alertRadius;
     Transform target;
     NavMeshAgent agent;
+    private bool persiguiendo = false;
 
     public GameObject playerPrefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         target = playerPrefab.transform;
@@ -21,8 +22,22 @@ public class Enemy_Alert : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= alertRadius)
         {
+            Debug.Log("jugador encontrado: "+distance);
+            if (!persiguiendo)
+            {
+                ActivarPersecucion(target);           
+            }
+        }
+        else
+        {
+            if (persiguiendo)
+            {
+                persiguiendo = false;
+            }
+        }
+        if (persiguiendo)
+        {
             agent.SetDestination(target.position);
-            
         }
     }
 
@@ -30,5 +45,10 @@ public class Enemy_Alert : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, alertRadius);
+    }
+    public void ActivarPersecucion(Transform jugador)
+    {
+        target = jugador;
+        persiguiendo = true;
     }
 }

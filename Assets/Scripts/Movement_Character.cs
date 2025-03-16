@@ -1,8 +1,9 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Movement_Character : MonoBehaviour
 {
-    public float velocidad;
+    public float speed;
     public Rigidbody rbCharacter;
     private Vector2 inputMov; //El movimiento del personaje sera 2D (ejes x,z)
 
@@ -13,6 +14,9 @@ public class Movement_Character : MonoBehaviour
     public float bulletsSpeed=10;
     private float lastBullet;
     public float bulletDelay=0.5f;
+
+    public Animator animator;
+    private bool moving;
 
     private void Start()
     {
@@ -26,7 +30,7 @@ public class Movement_Character : MonoBehaviour
         inputMov.y = Input.GetAxis("Vertical");
         inputMov.Normalize(); //Para que sea un vector unitario (que no aumente la velocidad al moverse en diagonal)
 
-        rbCharacter.linearVelocity = new Vector3(inputMov.x*velocidad, 0f, inputMov.y*velocidad); //0f porque no quiero que salte en ningún momento
+        rbCharacter.linearVelocity = new Vector3(inputMov.x*speed, 0f, inputMov.y*speed); //0f porque no quiero que salte en ningún momento
        
         //SHOOTING
         float shootH = Input.GetAxis("HorizontalShoot"); //Accede al Input System Package donde los inputs de las teclas ya están definidos
@@ -36,6 +40,9 @@ public class Movement_Character : MonoBehaviour
             Shoot(shootH, shootV);
             lastBullet = Time.time;
         }
+
+        //ANIMATIONS
+        Animations();
     }
     void OnTriggerEnter(Collider other)
     {
@@ -55,6 +62,19 @@ public class Movement_Character : MonoBehaviour
                 0,//EJE Y (no queremos que se mueva en el eje)
                 (y < 0) ? Mathf.Floor(y) * bulletsSpeed : Mathf.Ceil(y) * bulletsSpeed  //EJE Z           
             );
+    }
+
+    private void Animations()
+    {
+        moving = inputMov.magnitude > 0.1f;    
+
+        if (moving)
+        {
+            animator.SetFloat("XMovement", inputMov.x);
+            animator.SetFloat("YMovement", inputMov.y);
+        }
+
+        animator.SetBool("Moving", moving);
     }
 }
     

@@ -7,10 +7,13 @@ public class Shop : MonoBehaviour
     public GameManager coinManager;
 
     //JUGADOR
+    /*
     private int numBullets01 = 0;
     private int numBullets02 = 0;
     public int numCandy = 0;
     public int numTea = 0;
+    */ 
+     public GameManager inventoryPlayer; 
     
     //COSTE
     private int costBullets01 = 5;
@@ -36,10 +39,10 @@ public class Shop : MonoBehaviour
         {
             coinManager.coinCount-=costBullets01;
             numBullets01Shop = 0;
-            numBullets01= 1;
+            inventoryPlayer.numBullets01= 1;
 
             numBullets01ShopT.text = numBullets01Shop.ToString(); //Cantidad tienda
-            numBullets01PlayerT.text = numBullets01.ToString(); //Cantidad jugador
+            numBullets01PlayerT.text = inventoryPlayer.numBullets01.ToString(); //Cantidad jugador
         }
     }
     
@@ -49,10 +52,10 @@ public class Shop : MonoBehaviour
         {
             coinManager.coinCount -= costBullets02;
             numBullets02Shop = 0;
-            numBullets02 = 1;
+            inventoryPlayer.numBullets02 = 1;
 
             numBullets02ShopT.text = numBullets02Shop.ToString(); //Cantidad tienda
-            numBullets02PlayerT.text = numBullets02.ToString(); //Cantidad jugador
+            numBullets02PlayerT.text = inventoryPlayer.numBullets02.ToString(); //Cantidad jugador
         }
     }
 
@@ -61,7 +64,7 @@ public class Shop : MonoBehaviour
         if (coinManager.coinCount >= costCandy)
         {
             coinManager.coinCount -= costCandy;
-            numCandy++;
+            inventoryPlayer.numCandy++;
       
             //numCandyPlayerT.text = numCandy.ToString(); //Cantidad jugador
         }
@@ -72,9 +75,9 @@ public class Shop : MonoBehaviour
         if (coinManager.coinCount >= costTea)
         {
             coinManager.coinCount -= costTea;
-            numTea++;
+            inventoryPlayer.numTea++;
 
-            numTeaPlayerT.text = numTea.ToString(); //Cantidad jugador
+            numTeaPlayerT.text = inventoryPlayer.numTea.ToString(); //Cantidad jugador
         }
     }
 }

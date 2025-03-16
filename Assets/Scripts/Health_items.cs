@@ -1,12 +1,12 @@
 using UnityEngine;
 
 public class Health_items : MonoBehaviour
-{//SOLO PRUEBA
+{
     public int candy = 5;
     public int tea = 10;
     public Health_Player healthPlayer;
 
-    public Shop shop;
+    public GameManager inventoryPlayer;
     
     void Start()
     {
@@ -16,14 +16,14 @@ public class Health_items : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && (shop.numCandy >0))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && (inventoryPlayer.numCandy >0))
         {
-            shop.numCandy--;
+            inventoryPlayer.numCandy--;
             healthPlayer.TakeHealth(candy);
         }
-        if (Input.GetKey(KeyCode.Alpha2) && (shop.numTea > 0))
+        if (Input.GetKey(KeyCode.Alpha2) && (inventoryPlayer.numTea > 0))
         {
-            shop.numTea--;
+            inventoryPlayer.numTea--;
             healthPlayer.TakeHealth(tea);
         }       
     }

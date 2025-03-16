@@ -12,7 +12,7 @@ public class UI : MonoBehaviour
     public GameManager coinManager;
 
     //ITEMS
-    public Shop shop; //Para mostrar los caramelos en la tienda y no la interfaz
+    public GameManager inventoryPlayer;
     public TextMeshProUGUI candy;
     public TextMeshProUGUI tea;
 
@@ -26,8 +26,8 @@ public class UI : MonoBehaviour
         healthText.text = healthPlayer.health.ToString() + "/" + healthPlayer.maxHealth.ToString();
         coinsText.text = coinManager.coinCount.ToString();
 
-        candy.text = shop.numCandy.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
-        tea.text = shop.numTea.ToString();  
+        candy.text = inventoryPlayer.numCandy.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
+        tea.text = inventoryPlayer.numTea.ToString();  
     }
 
 }
