@@ -9,11 +9,7 @@ public class EnemyPatrol_Health : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-    }
-    void Update()
-    {
-    }
-    
+    }   
     public void TakeDamage(float damageTaken)
     {
         if (health > 0)
@@ -26,16 +22,6 @@ public class EnemyPatrol_Health : MonoBehaviour
         {
             Destroy(gameObject);
             enemyPatrol.CreateCoin();
-        }
-
-        /* CODIGO ANTIGUO
-        health =- damageTaken;
-        if (health <= 0)
-        {
-            //enemyPatrol.CreateCoin();
-            Destroy(gameObject);
-        }*/
+        }     
     }
-
-
 }

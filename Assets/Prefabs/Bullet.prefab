@@ -84,7 +84,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.72, y: 0.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -152,3 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   enemyPatrolHealth: {fileID: 5702235520370748561, guid: 1aa02a2ba9f0f9147bef3ed603477e11, type: 3}
+  inventoryPlayer: {fileID: 0}
+  bulletSprite01: {fileID: -7169906575211495959, guid: a10e0d8c7fa20c145b98e27fd6e89ca0, type: 3}
+  bulletSprite02: {fileID: -2486481493255110259, guid: a10e0d8c7fa20c145b98e27fd6e89ca0, type: 3}

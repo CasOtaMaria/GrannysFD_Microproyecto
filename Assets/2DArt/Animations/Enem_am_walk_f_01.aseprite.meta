@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0eb97fb8384c62f4ebbd3f68155d6b17
+guid: 8b78647eae9c06a40904d8e802ffe155
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638777515004749419
+  platformSettingsDirtyTick: 638778488446709659
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -135,7 +135,7 @@ ScriptedImporter:
       y: 4
       width: 68
       height: 96
-    spriteID: 7ea120e12102096439a2725c9b669091
+    spriteID: c681b9cc2b615a94aa18ca7c92750fcb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -156,7 +156,7 @@ ScriptedImporter:
       y: 4
       width: 72
       height: 96
-    spriteID: 29b3aad3963927a4bb8152d6e73b273a
+    spriteID: 804cb41d3545c6b46803c06fb5c326ae
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -173,11 +173,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 85
+      x: 84
       y: 4
       width: 72
       height: 96
-    spriteID: 3cd02a0062c9c0c4ab32af2294f3657b
+    spriteID: 21e564ff367f06d49a35b4486e6ea2cb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -189,8 +189,8 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -813285326
-    name: Enem_am_walk_f_02
+    guid: -813285327
+    name: Enem_am_walk_f_01
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -203,7 +203,7 @@ ScriptedImporter:
         y: 0
         width: 68
         height: 96
-      spriteId: 7ea120e12102096439a2725c9b669091
+      spriteId: c681b9cc2b615a94aa18ca7c92750fcb
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -212,7 +212,7 @@ ScriptedImporter:
         y: 0
         width: 72
         height: 96
-      spriteId: 29b3aad3963927a4bb8152d6e73b273a
+      spriteId: 804cb41d3545c6b46803c06fb5c326ae
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -221,7 +221,7 @@ ScriptedImporter:
         y: 0
         width: 72
         height: 96
-      spriteId: 3cd02a0062c9c0c4ab32af2294f3657b
+      spriteId: 21e564ff367f06d49a35b4486e6ea2cb
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -264,5 +264,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 76, y: 97}
+  canvasSize: {x: 76, y: 96}
   previousTextureSize: {x: 256, y: 128}

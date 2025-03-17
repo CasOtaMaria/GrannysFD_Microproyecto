@@ -7,7 +7,7 @@ public class Movement_Character : MonoBehaviour
     public Rigidbody rbCharacter;
     private Vector2 inputMov; //El movimiento del personaje sera 2D (ejes x,z)
 
-    public GameManager coinManager;
+    public GameManager gameManager;
 
     public Transform bulletsSpawn;
     public GameObject bulletsPrefab;
@@ -33,13 +33,17 @@ public class Movement_Character : MonoBehaviour
         rbCharacter.linearVelocity = new Vector3(inputMov.x*speed, 0f, inputMov.y*speed); //0f porque no quiero que salte en ningún momento
        
         //SHOOTING
-        float shootH = Input.GetAxis("HorizontalShoot"); //Accede al Input System Package donde los inputs de las teclas ya están definidos
-        float shootV = Input.GetAxis("VerticalShoot");
-        if((shootH != 0f || shootV != 0f) && Time.time > lastBullet + bulletDelay)
+        if (gameManager.numBullets01 > 0)
         {
-            Shoot(shootH, shootV);
-            lastBullet = Time.time;
+            float shootH = Input.GetAxis("HorizontalShoot"); //Accede al Input System Package donde los inputs de las teclas ya están definidos
+            float shootV = Input.GetAxis("VerticalShoot");
+            if ((shootH != 0f || shootV != 0f) && Time.time > lastBullet + bulletDelay)
+            {
+                Shoot(shootH, shootV);
+                lastBullet = Time.time;
+            }
         }
+        
 
         //ANIMATIONS
         Animations();
@@ -49,7 +53,7 @@ public class Movement_Character : MonoBehaviour
         if (other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
-            coinManager.coinCount++;
+            gameManager.coinCount++;
         }
     }
     void Shoot(float x, float y)
@@ -63,7 +67,6 @@ public class Movement_Character : MonoBehaviour
                 (y < 0) ? Mathf.Floor(y) * bulletsSpeed : Mathf.Ceil(y) * bulletsSpeed  //EJE Z           
             );
     }
-
     private void Animations()
     {
         moving = inputMov.magnitude > 0.1f;    

@@ -31,8 +31,7 @@ public class Enemy_Patrol : MonoBehaviour
         }
 
         //Para que no se mueva en el eje y, como el Movement_character
-        Vector3 targetPosition = new Vector3(targetPoint.position.x, 0.5f, targetPoint.position.z);        
-        //Pongo 0.5f porque si no se hunde en el suelo
+        Vector3 targetPosition = new Vector3(targetPoint.position.x, 0.5f, targetPoint.position.z);               
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
         Animations();

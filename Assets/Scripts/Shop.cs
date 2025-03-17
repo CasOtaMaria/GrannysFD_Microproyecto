@@ -16,8 +16,8 @@ public class Shop : MonoBehaviour
      public GameManager inventoryPlayer; 
     
     //COSTE
-    private int costBullets01 = 5;
-    private int costBullets02 = 5;
+    private int costBullets01 = 1;
+    private int costBullets02 = 1;
     private int costCandy = 1;
     private int costTea = 2;
     //CANTIDAD TIENDA

@@ -6,18 +6,32 @@ public class Bullets : MonoBehaviour
     public EnemyPatrol_Health enemyPatrolHealth;
     public GameManager inventoryPlayer;
 
-    /*
-    void Update()
+    private SpriteRenderer spriteRenderer; //Para cambiar el sprite dependiendo de la bala
+    public Sprite bulletSprite01;
+    public Sprite bulletSprite02;
+
+    void Start()
     {
-        if ((inventoryPlayer.numBullets01 == 1) && (inventoryPlayer.numBullets02==0))
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        BalaUsada();
+    }
+    private void Update()
+    {
+        BalaUsada();
+    }
+    void BalaUsada()
+    {
+        if ((inventoryPlayer.numBullets01 == 1) && (inventoryPlayer.numBullets02 == 0))
         {
+            spriteRenderer.sprite = bulletSprite01;
             damage = 5;
         }
-        if ((inventoryPlayer.numBullets01 == 1) && (inventoryPlayer.numBullets02 == 1))
+        else if ((inventoryPlayer.numBullets01 == 1) && (inventoryPlayer.numBullets02 == 1))
         {
+            spriteRenderer.sprite = bulletSprite02;
             damage = 8;
         }
-    }*/
+    }
 
     void OnCollisionEnter(Collision collision)
     {

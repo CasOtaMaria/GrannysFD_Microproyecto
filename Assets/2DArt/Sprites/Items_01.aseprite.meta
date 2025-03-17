@@ -355,7 +355,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Items_01_10
+  - name: Item_Bullet02
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
