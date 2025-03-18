@@ -3,21 +3,21 @@ using UnityEngine;
 public class Bullets : MonoBehaviour
 {
     public float damage;
-    public EnemyPatrol_Health enemyPatrolHealth;
-    public GameManager inventoryPlayer;
+    private EnemyPatrol_Health enemyPatrolHealth;
+    public GameManager inventoryPlayer;   
 
     private SpriteRenderer spriteRenderer; //Para cambiar el sprite dependiendo de la bala
     public Sprite bulletSprite01;
     public Sprite bulletSprite02;
 
     void Start()
-    {
+    {     
         spriteRenderer = GetComponent<SpriteRenderer>();
         BalaUsada();
     }
     private void Update()
     {
-        BalaUsada();
+        //BalaUsada();
     }
     void BalaUsada()
     {
@@ -25,11 +25,13 @@ public class Bullets : MonoBehaviour
         {
             spriteRenderer.sprite = bulletSprite01;
             damage = 5;
+            Debug.Log("Bullets 01");
         }
         else if ((inventoryPlayer.numBullets01 == 1) && (inventoryPlayer.numBullets02 == 1))
         {
             spriteRenderer.sprite = bulletSprite02;
             damage = 8;
+            Debug.Log("Bullets 02");
         }
     }
 
