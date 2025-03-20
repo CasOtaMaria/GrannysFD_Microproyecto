@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 //using UnityEngine.Apple;
-using static UnityEngine.EventSystems.StandaloneInputModule;
+//using static UnityEngine.EventSystems.StandaloneInputModule;
 
 public class Enemy_Patrol : MonoBehaviour
 {

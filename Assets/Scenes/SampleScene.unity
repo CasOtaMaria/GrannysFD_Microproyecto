@@ -908,11 +908,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab026f2a228d4d48bbfb3febd7c8d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementCharacter: {fileID: 8642863427455398836}
   coinCount: 0
   numBullets01: 0
   numBullets02: 0
   numCandy: 0
   numTea: 0
+  bullet01Prefab: {fileID: 5397287127976055133, guid: 5fcc64cf6ce5a684498dc115fe724448, type: 3}
+  bullet02Prefab: {fileID: 5397287127976055133, guid: ba3dd5e491cc06144b3c8d61e5be65a4, type: 3}
 --- !u!1 &602852581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69000006, y: 0.73}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 80.49999, y: -11.5}
+  m_AnchoredPosition: {x: 80.5, y: -11.5}
   m_SizeDelta: {x: 169, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998524825
@@ -2215,8 +2218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedae78d300979d4d96d99c4dbf3f251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinManager: {fileID: 577314861}
-  inventoryPlayer: {fileID: 577314861}
+  gameManager: {fileID: 577314861}
   numBullets01ShopT: {fileID: 350568939}
   numBullets02ShopT: {fileID: 998524825}
   numBullets01PlayerT: {fileID: 750923635}
@@ -4575,6 +4577,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a76e6ceed73c5f4390099c1ae202edd, type: 3}
+--- !u!114 &8642863427455398836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9187470269910116686, guid: 3a76e6ceed73c5f4390099c1ae202edd, type: 3}
+  m_PrefabInstance: {fileID: 8642863427455398835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546607982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4cc1a01b0d0074fbe67220eaed32c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

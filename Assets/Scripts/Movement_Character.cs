@@ -42,9 +42,7 @@ public class Movement_Character : MonoBehaviour
                 Shoot(shootH, shootV);
                 lastBullet = Time.time;
             }
-        }
-        
-
+        }       
         //ANIMATIONS
         Animations();
     }

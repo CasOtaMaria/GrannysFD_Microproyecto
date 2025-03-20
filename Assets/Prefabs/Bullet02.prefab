@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2981471757240327919}
   - component: {fileID: -5345573147762423655}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7169906575211495959, guid: a10e0d8c7fa20c145b98e27fd6e89ca0, type: 3}
+  m_Sprite: {fileID: -2486481493255110259, guid: a10e0d8c7fa20c145b98e27fd6e89ca0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,8 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e754a1b3c6cbc4d4b89a428e4549fb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  enemyPatrolHealth: {fileID: 0}
+  damage: 8
   inventoryPlayer: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
   bulletSprite01: {fileID: -7169906575211495959, guid: a10e0d8c7fa20c145b98e27fd6e89ca0, type: 3}
   bulletSprite02: {fileID: -2486481493255110259, guid: a10e0d8c7fa20c145b98e27fd6e89ca0, type: 3}
