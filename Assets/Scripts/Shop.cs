@@ -8,12 +8,12 @@ public class Shop : MonoBehaviour
     
     //COSTE
     private int costBullets01 = 1;
-    private int costBullets02 = 1;
+    private int costBullets02 = 3;
     private int costCandy = 1;
     private int costTea = 2;
     //CANTIDAD TIENDA
     private int numBullets01Shop = 1;
-    private int numBullets02Shop = 3;
+    private int numBullets02Shop = 1;
 
     //TEXTO TIENDA (CANTIDAD EN TIENDA)
     public TextMeshProUGUI numBullets01ShopT;
@@ -35,8 +35,7 @@ public class Shop : MonoBehaviour
             numBullets01ShopT.text = numBullets01Shop.ToString(); //Cantidad tienda
             numBullets01PlayerT.text = gameManager.numBullets01.ToString(); //Cantidad jugador
         }
-    }
-    
+    } 
     public void BuyBullets02()
     {
         if (gameManager.coinCount >= costBullets02)
@@ -51,7 +50,6 @@ public class Shop : MonoBehaviour
             numBullets02PlayerT.text = gameManager.numBullets02.ToString(); //Cantidad jugador
         }
     }
-
     public void BuyCandy()
     {
         if (gameManager.coinCount >= costCandy)
@@ -62,7 +60,6 @@ public class Shop : MonoBehaviour
             //numCandyPlayerT.text = numCandy.ToString(); //Cantidad jugador
         }
     }
-    
     public void BuyTea()
     {
         if (gameManager.coinCount >= costTea)

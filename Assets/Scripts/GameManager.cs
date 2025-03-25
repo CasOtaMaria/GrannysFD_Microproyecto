@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Movement_Character movementCharacter;
+    public PauseMenu pauseMenu;
     
     //INVENTARIO
     public int coinCount;   
@@ -19,6 +20,13 @@ public class GameManager : MonoBehaviour
     public void UpgradeBullets()
     {
         movementCharacter.bulletsPrefab = bullet02Prefab;
+    }   
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.PauseGame();
+        }
     }
-
 }
+
