@@ -26,7 +26,7 @@ public class Shop : MonoBehaviour
 
     public void BuyBullets01()
     {
-        if (gameManager.coinCount >= costBullets01)
+        if ((gameManager.coinCount >= costBullets01)&&(numBullets01Shop!=0))
         {
             gameManager.coinCount-=costBullets01;
             numBullets01Shop = 0;
@@ -38,7 +38,7 @@ public class Shop : MonoBehaviour
     } 
     public void BuyBullets02()
     {
-        if (gameManager.coinCount >= costBullets02)
+        if ((gameManager.coinCount >= costBullets02) && (numBullets02Shop != 0))
         {
             gameManager.UpgradeBullets();
 
