@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public Movement_Character movementCharacter;
     public PauseMenu pauseMenu;
+    public GameObject optionsMenu;
     
     //INVENTARIO
     public int coinCount;   
@@ -17,10 +18,10 @@ public class GameManager : MonoBehaviour
     public GameObject bullet01Prefab;
     public GameObject bullet02Prefab;
 
-    public void UpgradeBullets()
+    private void Start()
     {
-        movementCharacter.bulletsPrefab = bullet02Prefab;
-    }   
+        optionsMenu.SetActive(false);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -28,5 +29,10 @@ public class GameManager : MonoBehaviour
             pauseMenu.PauseGame();
         }
     }
+    public void UpgradeBullets()
+    {
+        movementCharacter.bulletsPrefab = bullet02Prefab;
+    } 
+    
 }
 
