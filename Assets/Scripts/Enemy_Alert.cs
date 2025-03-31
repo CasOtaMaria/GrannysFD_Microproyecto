@@ -22,7 +22,7 @@ public class Enemy_Alert : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= alertRadius)
         {
-            Debug.Log("jugador encontrado: "+distance);
+            //Debug.Log("jugador encontrado: "+distance);
             if (!persiguiendo)
             {
                 ActivarPersecucion(target);           
