@@ -273,8 +273,8 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Item_Ticket01
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -294,8 +294,8 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Item_Ticket02
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -315,16 +315,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Item_Ticket03
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 136
-      y: 114
+      y: 116
       width: 60
-      height: 93
+      height: 91
     spriteID: cb5e41635f46320429da70e5b7d474b8
     spriteBone: []
     spriteOutline: []

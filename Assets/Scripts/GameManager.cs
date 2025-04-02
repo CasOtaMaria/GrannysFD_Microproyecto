@@ -14,9 +14,15 @@ public class GameManager : MonoBehaviour
     public int numCandy = 0;
     public int numTea = 0;
 
+    public int keyFruit = 0;
+    public int keyFish = 0;
+    public int keyMeat = 0;
+
     //TIPOS DE BALAS
     public GameObject bullet01Prefab;
     public GameObject bullet02Prefab;
+
+    public float speedUpgrade = 5f;
 
     private void Start()
     {
@@ -32,7 +38,12 @@ public class GameManager : MonoBehaviour
     public void UpgradeBullets()
     {
         movementCharacter.bulletsPrefab = bullet02Prefab;
-    } 
-    
+    }
+    public void UpgradeSpeed()
+    {
+        movementCharacter.speed = speedUpgrade;
+    }
+
+
 }
 

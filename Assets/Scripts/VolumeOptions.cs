@@ -6,22 +6,25 @@ public class VolumeOptions : MonoBehaviour
     public Slider volumeSlider;
     public float sliderValue;
 
-   // public Image iconMuted; //para el icono de muted
+    //public Slider sfxSlider;
+    //public float sfxSliderValue;
+
+    // public Image iconMuted; //para el icono de muted
 
     private void Start()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("volumenAudio",0.5f); //creo la variable volumenAudio, con playerprefs se quedara guardada
         AudioListener.volume = volumeSlider.value; //volumen del juego = slider
-        IsMuted();
+        IsVolumeMuted();
     }
-    public void ChangeSlider(float volumeValue)
+    public void ChangeVolumeSlider(float volumeValue)
     {
         sliderValue = volumeValue;
         PlayerPrefs.SetFloat("volumenAudio", sliderValue);
         AudioListener.volume = volumeSlider.value;
-        IsMuted();
+        IsVolumeMuted();
     }
-    public void IsMuted()
+    public void IsVolumeMuted()
     {
         if (sliderValue == 0)
         {

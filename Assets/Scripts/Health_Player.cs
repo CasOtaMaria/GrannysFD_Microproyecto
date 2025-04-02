@@ -21,7 +21,6 @@ public class Health_Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-
     public void TakeHealth(int healthTaken)
     {
         if (health + healthTaken > 100)

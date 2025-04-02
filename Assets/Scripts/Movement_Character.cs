@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movement_Character : MonoBehaviour
 {
-    public float speed;
+    public float speed = 3.5f;
     public Rigidbody rbCharacter;
     private Vector2 inputMov; //El movimiento del personaje sera 2D (ejes x,z)
 
@@ -18,10 +18,6 @@ public class Movement_Character : MonoBehaviour
     public Animator animator;
     private bool moving;
 
-    private void Start()
-    {
-       
-    }
 
     void Update()
     {
@@ -46,6 +42,7 @@ public class Movement_Character : MonoBehaviour
         //ANIMATIONS
         Animations();
     }
+    //RECOLECCION DE ITEMS
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Coin"))
@@ -53,7 +50,24 @@ public class Movement_Character : MonoBehaviour
             Destroy(other.gameObject);
             gameManager.coinCount++;
         }
+        if (other.gameObject.CompareTag("KeyFruit"))
+        {
+            Debug.Log("Tienes la llave fruit");
+            Destroy(other.gameObject);
+            gameManager.keyFruit++;
+        }
+        if (other.gameObject.CompareTag("KeyMeat"))
+        {
+            Destroy(other.gameObject);
+            gameManager.keyMeat++;
+        }
+        if (other.gameObject.CompareTag("KeyFish"))
+        {
+            Destroy(other.gameObject);
+            gameManager.keyFish++;
+        }
     }
+    //DISPARO
     void Shoot(float x, float y)
     {
         var bullet = Instantiate(bulletsPrefab, bulletsSpawn.position, bulletsSpawn.rotation) as GameObject;
@@ -65,6 +79,7 @@ public class Movement_Character : MonoBehaviour
                 (y < 0) ? Mathf.Floor(y) * bulletsSpeed : Mathf.Ceil(y) * bulletsSpeed  //EJE Z           
             );
     }
+    //ANIMACIONES
     private void Animations()
     {
         moving = inputMov.magnitude > 0.1f;    

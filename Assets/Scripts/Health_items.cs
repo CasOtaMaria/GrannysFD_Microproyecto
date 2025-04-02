@@ -7,13 +7,7 @@ public class Health_items : MonoBehaviour
     public Health_Player healthPlayer;
 
     public GameManager inventoryPlayer;
-    
-    void Start()
-    {
-        
-    }
-
-    
+   
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && (inventoryPlayer.numCandy >0))
@@ -25,7 +19,7 @@ public class Health_items : MonoBehaviour
         {
             inventoryPlayer.numTea--;
             healthPlayer.TakeHealth(tea);
-        }       
+        }
     }
 
 }
