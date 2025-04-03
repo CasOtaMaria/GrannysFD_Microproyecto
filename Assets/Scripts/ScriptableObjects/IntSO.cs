@@ -10,7 +10,4 @@ public class IntSO : ScriptableObject
         get { return _value; }
         set { _value = value; }
     }
-
-
-
 }

@@ -35,7 +35,7 @@ public class Trap : MonoBehaviour
             {
                 Debug.Log("Daño");
                 healthPlayer.TakeDamage(damageTrap);
-                Debug.Log("Salud: " + healthPlayer.health);
+                Debug.Log("Salud: " + healthPlayer.healthSO._value);
             }
             else
             {

@@ -15,7 +15,7 @@ public class Shop : MonoBehaviour
     //CANTIDAD TIENDA
     private int numBullets01Shop = 1;
     private int numBullets02Shop = 1;
-    private int numSpeedShoop = 1;
+    private int numSpeedShop = 1;
 
     //TEXTO TIENDA (CANTIDAD EN TIENDA)
     public TextMeshProUGUI numBullets01ShopT;
@@ -32,24 +32,24 @@ public class Shop : MonoBehaviour
         {
             gameManager.coinCountSO._value -=costBullets01;
             numBullets01Shop = 0;
-            gameManager.numBullets01= 1;
+            gameManager.numBul01SO._value= 1;
 
             numBullets01ShopT.text = numBullets01Shop.ToString(); //Cantidad tienda
-            numBullets01PlayerT.text = gameManager.numBullets01.ToString(); //Cantidad jugador
+            numBullets01PlayerT.text = gameManager.numBul01SO._value.ToString(); //Cantidad jugador
         }
     } 
     public void BuyBullets02()
     {
         if ((gameManager.coinCountSO._value >= costBullets02) && (numBullets02Shop != 0))
         {
-            gameManager.UpgradeBullets();
+            //gameManager.UpgradeBullets();
 
             gameManager.coinCountSO._value -= costBullets02;
             numBullets02Shop = 0;
-            gameManager.numBullets02 = 1;
+            gameManager.numBul02SO._value = 1;
 
             numBullets02ShopT.text = numBullets02Shop.ToString(); //Cantidad tienda
-            numBullets02PlayerT.text = gameManager.numBullets02.ToString(); //Cantidad jugador
+            numBullets02PlayerT.text = gameManager.numBul02SO._value.ToString(); //Cantidad jugador
         }
     }
     public void BuyCandy()
@@ -57,7 +57,7 @@ public class Shop : MonoBehaviour
         if (gameManager.coinCountSO._value >= costCandy)
         {
             gameManager.coinCountSO._value -= costCandy;
-            gameManager.numCandy++;
+            gameManager.numCandySO._value++;
       
             //numCandyPlayerT.text = numCandy.ToString(); //Cantidad jugador
         }
@@ -67,9 +67,9 @@ public class Shop : MonoBehaviour
         if (gameManager.coinCountSO._value >= costTea)
         {
             gameManager.coinCountSO._value -= costTea;
-            gameManager.numTea++;
+            gameManager.numTeaSO._value++;
 
-            numTeaPlayerT.text = gameManager.numTea.ToString(); //Cantidad jugador
+            numTeaPlayerT.text = gameManager.numTeaSO._value.ToString(); //Cantidad jugador
         }
     }
 
@@ -78,7 +78,7 @@ public class Shop : MonoBehaviour
         if ((gameManager.coinCountSO._value >= costSpeed) && (numBullets02Shop != 0))
         {
             gameManager.coinCountSO._value -= costSpeed;
-            numSpeedShoop = 0;
+            numSpeedShop = 0;
             gameManager.UpgradeSpeed();
 
             //numTeaPlayerT.text = gameManager.numTea.ToString(); //Cantidad jugador

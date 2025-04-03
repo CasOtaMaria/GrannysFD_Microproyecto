@@ -3,19 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class Health_Player : MonoBehaviour
 {
+    /*
     public int health;
     public int maxHealth = 100;
+    */
+    [SerializeField]
+    public IntSO healthSO;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        health = maxHealth;
+        //healthSO._value = 100;
     }
 
     public void TakeDamage(int damageTaken)
     {
-        health -= damageTaken;
-        if (health <= 0)
+        healthSO._value -= damageTaken;
+        if (healthSO._value <= 0)
         {
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -23,13 +27,13 @@ public class Health_Player : MonoBehaviour
     }
     public void TakeHealth(int healthTaken)
     {
-        if (health + healthTaken > 100)
+        if (healthSO._value + healthTaken > 100)
         {
-            health = maxHealth;
+            healthSO._value = 100;
         }
         else
         {
-            health=health + healthTaken;
+            healthSO._value = healthSO._value + healthTaken;
         }
     }
 }

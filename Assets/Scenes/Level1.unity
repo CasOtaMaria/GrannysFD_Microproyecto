@@ -597,19 +597,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementCharacter: {fileID: 608529068404890365}
+  healthPlayer: {fileID: 2412338547803346882}
   pauseMenu: {fileID: 1264044711}
   optionsMenu: {fileID: 1083839979}
+  speedSO: {fileID: 11400000, guid: 5a7e9657281658946bfe98f2042ea0f6, type: 2}
   coinCountSO: {fileID: 11400000, guid: 1e835c7add52a8a44840e8970ac65079, type: 2}
-  numBullets01: 0
-  numBullets02: 0
-  numCandy: 0
-  numTea: 0
-  keyFruit: 0
-  keyFish: 0
-  keyMeat: 0
+  numBul01SO: {fileID: 11400000, guid: 6c71f19ea85913942b7c695a5e853b37, type: 2}
+  numBul02SO: {fileID: 11400000, guid: 1ca1a40115b66fc46927b0c88c611f9c, type: 2}
+  numCandySO: {fileID: 11400000, guid: caae25f971308dc4b83dfdf387d68907, type: 2}
+  numTeaSO: {fileID: 11400000, guid: 43a1968c259b46849a6b146ad58c4aa5, type: 2}
+  keyFruitSO: {fileID: 11400000, guid: 4f208d97149e99b498dde65414c3e1a6, type: 2}
+  keyMeatSO: {fileID: 11400000, guid: d8a5a4452339fc1499d13bc20b69af13, type: 2}
+  keyFishSO: {fileID: 11400000, guid: 1216cb860e79f984dbab0cd6a7912291, type: 2}
   bullet01Prefab: {fileID: 5397287127976055133, guid: 5fcc64cf6ce5a684498dc115fe724448, type: 3}
   bullet02Prefab: {fileID: 5397287127976055133, guid: ba3dd5e491cc06144b3c8d61e5be65a4, type: 3}
-  speedUpgrade: 5
 --- !u!114 &602852582 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7266932774521976591, guid: 8e38caa0ddc2ece4fb1e4a0ede41f86e, type: 3}
@@ -651,6 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9703f2f9159060b459269d90947c582e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenename: LevellChangePrueba
 --- !u!65 &669766969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1879,6 +1881,10 @@ PrefabInstance:
       value: Trampa (1)
       objectReference: {fileID: 0}
     - target: {fileID: 413039625127284666, guid: 17849a9ea536a1a47a80b6cf202e3aeb, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 577314861}
+    - target: {fileID: 413039625127284666, guid: 17849a9ea536a1a47a80b6cf202e3aeb, type: 3}
       propertyPath: dropSpecialItem
       value: 1
       objectReference: {fileID: 0}
@@ -2393,6 +2399,10 @@ PrefabInstance:
       value: Trampa
       objectReference: {fileID: 0}
     - target: {fileID: 413039625127284666, guid: 17849a9ea536a1a47a80b6cf202e3aeb, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 577314861}
+    - target: {fileID: 413039625127284666, guid: 17849a9ea536a1a47a80b6cf202e3aeb, type: 3}
       propertyPath: healthPlayer
       value: 
       objectReference: {fileID: 2412338547803346882}
@@ -2467,7 +2477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2804694235768963681, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 2804694235768963681, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2566,13 +2576,25 @@ PrefabInstance:
       value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 6878358840752893646, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878358840752893646, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 8597873721159705305}
     - target: {fileID: 6878358840752893646, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
+      propertyPath: speedSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a7e9657281658946bfe98f2042ea0f6, type: 2}
+    - target: {fileID: 6878358840752893646, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 577314861}
+    - target: {fileID: 8985944277006430298, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
+      propertyPath: healthSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e6e0c036e1a3a846a8f79235bca2ff8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

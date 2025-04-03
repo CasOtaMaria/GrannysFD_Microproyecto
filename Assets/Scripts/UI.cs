@@ -17,17 +17,17 @@ public class UI : MonoBehaviour
 
     void Start()
     {
-        healthPlayer.health = healthPlayer.maxHealth;
+        //healthPlayer.healthSO._value = 100;
     }
 
     void Update()
     {
-        healthText.text = healthPlayer.health.ToString() + "/" + healthPlayer.maxHealth.ToString();
+        healthText.text =healthPlayer.healthSO.Value+"" + "/" + 100;
         //coinsText.text = inventoryPlayer.coinCountSO.ToString();
         coinsText.text = gameManager.coinCountSO.Value+"";
 
-        candy.text = gameManager.numCandy.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
-        tea.text = gameManager.numTea.ToString();  
+        candy.text = gameManager.numCandySO._value.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
+        tea.text = gameManager.numTeaSO._value.ToString();  
     }
 
 }

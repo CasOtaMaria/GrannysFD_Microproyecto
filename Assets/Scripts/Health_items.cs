@@ -10,14 +10,14 @@ public class Health_items : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && (inventoryPlayer.numCandy >0))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && (inventoryPlayer.numCandySO._value>0))
         {
-            inventoryPlayer.numCandy--;
+            inventoryPlayer.numCandySO._value--;
             healthPlayer.TakeHealth(candy);
         }
-        if (Input.GetKey(KeyCode.Alpha2) && (inventoryPlayer.numTea > 0))
+        if (Input.GetKey(KeyCode.Alpha2) && (inventoryPlayer.numTeaSO._value > 0))
         {
-            inventoryPlayer.numTea--;
+            inventoryPlayer.numTeaSO._value--;
             healthPlayer.TakeHealth(tea);
         }
     }

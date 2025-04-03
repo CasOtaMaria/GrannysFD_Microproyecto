@@ -133,23 +133,23 @@ public class Doors : MonoBehaviour
     void HasKey()
     {
         // Comprobación de las llaves necesarias para abrir la puerta
-        if (keyToOpen == 1 && gameManager.keyFruit > 0)
+        if (keyToOpen == 1 && gameManager.keyFruitSO._value > 0)
         {
             Debug.Log("Tienes la llave de fruta");
             DoorOpen();
-            gameManager.keyFruit--;
+            gameManager.keyFruitSO._value--;
         }
-        else if (keyToOpen == 2 && gameManager.keyFish > 0)
+        else if (keyToOpen == 2 && gameManager.keyFishSO._value > 0)
         {
             Debug.Log("Tienes la llave de pescado");
             DoorOpen();
-            gameManager.keyFish--;
+            gameManager.keyFishSO._value--;
         }
-        else if (keyToOpen == 3 && gameManager.keyMeat > 0)
+        else if (keyToOpen == 3 && gameManager.keyMeatSO._value > 0)
         {
             Debug.Log("Tienes la llave de carne");
             DoorOpen();
-            gameManager.keyMeat--;
+            gameManager.keyMeatSO._value--;
         }
         else
         {

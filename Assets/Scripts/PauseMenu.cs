@@ -51,16 +51,17 @@ public class PauseMenu : MonoBehaviour
     public void RestartGame()
     {
         Debug.Log("Se ha reiniciado el juego");
-        gameManager.ResetDataSO();
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
+        SceneManager.LoadScene("Level1");
+        //menuPausaUI.SetActive(false);
+        //pausa = false;
         Time.timeScale = 1f;
         //Cuando tenga mas escenas hay que hacer una lista con todas para que se reinicien
+        gameManager.ResetDataSO();
     }
     public void MainMenu()
     {
+        gameManager.ResetDataSO();
         Debug.Log("Se ha vuelto al menu principal");
-
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }

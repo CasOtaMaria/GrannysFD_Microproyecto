@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Movement_Character : MonoBehaviour
 {
-    public float speed = 3.5f;
     public Rigidbody rbCharacter;
     private Vector2 inputMov; //El movimiento del personaje sera 2D (ejes x,z)
 
@@ -25,10 +24,10 @@ public class Movement_Character : MonoBehaviour
         inputMov.y = Input.GetAxis("Vertical");
         inputMov.Normalize(); //Para que sea un vector unitario (que no aumente la velocidad al moverse en diagonal)
 
-        rbCharacter.linearVelocity = new Vector3(inputMov.x*speed, 0f, inputMov.y*speed); //0f porque no quiero que salte en ningún momento
+        rbCharacter.linearVelocity = new Vector3(inputMov.x*(gameManager.speedSO._value), 0f, inputMov.y* (gameManager.speedSO._value)); //0f porque no quiero que salte en ningún momento
        
         //SHOOTING
-        if (gameManager.numBullets01 > 0)
+        if (gameManager.numBul01SO._value > 0)
         {
             float shootH = Input.GetAxis("HorizontalShoot"); //Accede al Input System Package donde los inputs de las teclas ya están definidos
             float shootV = Input.GetAxis("VerticalShoot");
@@ -53,17 +52,17 @@ public class Movement_Character : MonoBehaviour
         {
             Debug.Log("Tienes la llave fruit");
             Destroy(other.gameObject);
-            gameManager.keyFruit++;
+            gameManager.keyFruitSO._value++;
         }
         if (other.gameObject.CompareTag("KeyMeat"))
         {
             Destroy(other.gameObject);
-            gameManager.keyMeat++;
+            gameManager.keyMeatSO._value++;
         }
         if (other.gameObject.CompareTag("KeyFish"))
         {
             Destroy(other.gameObject);
-            gameManager.keyFish++;
+            gameManager.keyFishSO._value++;
         }
     }
     //DISPARO

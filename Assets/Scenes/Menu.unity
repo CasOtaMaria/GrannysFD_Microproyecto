@@ -2381,9 +2381,49 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: speedSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a7e9657281658946bfe98f2042ea0f6, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: healthSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e6e0c036e1a3a846a8f79235bca2ff8, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: numTeaSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 43a1968c259b46849a6b146ad58c4aa5, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: keyFishSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 1216cb860e79f984dbab0cd6a7912291, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: keyMeatSO
+      value: 
+      objectReference: {fileID: 11400000, guid: d8a5a4452339fc1499d13bc20b69af13, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: keyFruitSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f208d97149e99b498dde65414c3e1a6, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: numBul01SO
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c71f19ea85913942b7c695a5e853b37, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: numBul02SO
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ca1a40115b66fc46927b0c88c611f9c, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: numCandySO
+      value: 
+      objectReference: {fileID: 11400000, guid: caae25f971308dc4b83dfdf387d68907, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
       propertyPath: coinCountSO
       value: 
       objectReference: {fileID: 11400000, guid: 1e835c7add52a8a44840e8970ac65079, type: 2}
+    - target: {fileID: 7208068861467154813, guid: 33d1f39f2b4f9c54cb1bc0c1be4dc04e, type: 3}
+      propertyPath: healthPlayer
+      value: 
+      objectReference: {fileID: 8985944277006430298, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
