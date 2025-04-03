@@ -9,10 +9,9 @@ public class UI : MonoBehaviour
     public Health_Player healthPlayer;
     //MONEDAS
     public TextMeshProUGUI coinsText;
-    public GameManager coinManager;
 
     //ITEMS
-    public GameManager inventoryPlayer;
+    public GameManager gameManager;
     public TextMeshProUGUI candy;
     public TextMeshProUGUI tea;
 
@@ -24,10 +23,11 @@ public class UI : MonoBehaviour
     void Update()
     {
         healthText.text = healthPlayer.health.ToString() + "/" + healthPlayer.maxHealth.ToString();
-        coinsText.text = coinManager.coinCount.ToString();
+        //coinsText.text = inventoryPlayer.coinCountSO.ToString();
+        coinsText.text = gameManager.coinCountSO.Value+"";
 
-        candy.text = inventoryPlayer.numCandy.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
-        tea.text = inventoryPlayer.numTea.ToString();  
+        candy.text = gameManager.numCandy.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
+        tea.text = gameManager.numTea.ToString();  
     }
 
 }

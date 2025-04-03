@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject menuPausaUI;
+    public GameManager gameManager;
     bool pausa = false;
 
     void Start()
@@ -50,6 +51,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartGame()
     {
         Debug.Log("Se ha reiniciado el juego");
+        gameManager.ResetDataSO();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
         Time.timeScale = 1f;

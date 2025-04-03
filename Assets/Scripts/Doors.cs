@@ -14,6 +14,9 @@ public class Doors : MonoBehaviour
 
     private bool playerInRange = false;
     private bool keyPressed = false;
+
+    public Camera cameraChange;
+    CameraManager cameraManager; 
     /*
     private void OnTriggerEnter(Collider collider)
     {
@@ -158,5 +161,13 @@ public class Doors : MonoBehaviour
     {
         Debug.Log("Puerta abierta");
         Destroy(gameObject);  // Destruye la puerta
+
+
+        //Invoke("ChangeCamera", 1f);
     }
+    /*
+    public void ChangeCamera()
+    {
+        cameraManager.cameraUsing = cameraChange;
+    }*/
 }

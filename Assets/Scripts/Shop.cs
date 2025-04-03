@@ -28,9 +28,9 @@ public class Shop : MonoBehaviour
 
     public void BuyBullets01()
     {
-        if ((gameManager.coinCount >= costBullets01)&&(numBullets01Shop!=0))
+        if ((gameManager.coinCountSO._value >= costBullets01)&&(numBullets01Shop!=0))
         {
-            gameManager.coinCount-=costBullets01;
+            gameManager.coinCountSO._value -=costBullets01;
             numBullets01Shop = 0;
             gameManager.numBullets01= 1;
 
@@ -40,11 +40,11 @@ public class Shop : MonoBehaviour
     } 
     public void BuyBullets02()
     {
-        if ((gameManager.coinCount >= costBullets02) && (numBullets02Shop != 0))
+        if ((gameManager.coinCountSO._value >= costBullets02) && (numBullets02Shop != 0))
         {
             gameManager.UpgradeBullets();
 
-            gameManager.coinCount -= costBullets02;
+            gameManager.coinCountSO._value -= costBullets02;
             numBullets02Shop = 0;
             gameManager.numBullets02 = 1;
 
@@ -54,9 +54,9 @@ public class Shop : MonoBehaviour
     }
     public void BuyCandy()
     {
-        if (gameManager.coinCount >= costCandy)
+        if (gameManager.coinCountSO._value >= costCandy)
         {
-            gameManager.coinCount -= costCandy;
+            gameManager.coinCountSO._value -= costCandy;
             gameManager.numCandy++;
       
             //numCandyPlayerT.text = numCandy.ToString(); //Cantidad jugador
@@ -64,9 +64,9 @@ public class Shop : MonoBehaviour
     }
     public void BuyTea()
     {
-        if (gameManager.coinCount >= costTea)
+        if (gameManager.coinCountSO._value >= costTea)
         {
-            gameManager.coinCount -= costTea;
+            gameManager.coinCountSO._value -= costTea;
             gameManager.numTea++;
 
             numTeaPlayerT.text = gameManager.numTea.ToString(); //Cantidad jugador
@@ -75,9 +75,9 @@ public class Shop : MonoBehaviour
 
     public void BuySpeed()
     {
-        if ((gameManager.coinCount >= costSpeed) && (numBullets02Shop != 0))
+        if ((gameManager.coinCountSO._value >= costSpeed) && (numBullets02Shop != 0))
         {
-            gameManager.coinCount -= costSpeed;
+            gameManager.coinCountSO._value -= costSpeed;
             numSpeedShoop = 0;
             gameManager.UpgradeSpeed();
 

@@ -18,7 +18,6 @@ public class Movement_Character : MonoBehaviour
     public Animator animator;
     private bool moving;
 
-
     void Update()
     {
         //MOVEMENT
@@ -48,7 +47,7 @@ public class Movement_Character : MonoBehaviour
         if (other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
-            gameManager.coinCount++;
+            gameManager.coinCountSO._value++;
         }
         if (other.gameObject.CompareTag("KeyFruit"))
         {
@@ -91,6 +90,6 @@ public class Movement_Character : MonoBehaviour
         }
 
         animator.SetBool("Moving", moving);
-    }
+    } 
 }
     

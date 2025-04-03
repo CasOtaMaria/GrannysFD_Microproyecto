@@ -44,8 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab026f2a228d4d48bbfb3febd7c8d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementCharacter: {fileID: 6878358840752893646, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
+  pauseMenu: {fileID: 3535251288919668274, guid: 55878d142323ef74685f48e7d512b988, type: 3}
+  optionsMenu: {fileID: 6086495787174860302, guid: 4df68bfc35d5d7b4ebd0ae4d7596a2d7, type: 3}
   coinCount: 0
   numBullets01: 0
   numBullets02: 0
   numCandy: 0
   numTea: 0
+  keyFruit: 0
+  keyFish: 0
+  keyMeat: 0
+  bullet01Prefab: {fileID: 5397287127976055133, guid: 5fcc64cf6ce5a684498dc115fe724448, type: 3}
+  bullet02Prefab: {fileID: 5397287127976055133, guid: ba3dd5e491cc06144b3c8d61e5be65a4, type: 3}
+  speedUpgrade: 5

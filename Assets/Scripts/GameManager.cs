@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,9 +7,11 @@ public class GameManager : MonoBehaviour
     public Movement_Character movementCharacter;
     public PauseMenu pauseMenu;
     public GameObject optionsMenu;
-    
+
     //INVENTARIO
-    public int coinCount;   
+    [SerializeField]
+    public IntSO coinCountSO; 
+
     public int numBullets01 = 0;
     public int numBullets02 = 0;
     public int numCandy = 0;
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
             pauseMenu.PauseGame();
         }
     }
+
     public void UpgradeBullets()
     {
         movementCharacter.bulletsPrefab = bullet02Prefab;
@@ -42,6 +46,11 @@ public class GameManager : MonoBehaviour
     public void UpgradeSpeed()
     {
         movementCharacter.speed = speedUpgrade;
+    }
+    public void ResetDataSO()
+    {
+        coinCountSO._value = 0;
+        Debug.Log("Coin count has been reset to: " + coinCountSO._value);
     }
 
 

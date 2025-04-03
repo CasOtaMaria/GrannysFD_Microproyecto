@@ -13,6 +13,7 @@ public class Enemy_Patrol : MonoBehaviour
     public Transform targetPoint;
 
     public GameObject coinPrefab;
+    public Transform itemSpawnPoint;
 
     public Health_Player healthPlayer; //para poder acceder desde este codigo
 
@@ -46,7 +47,7 @@ public class Enemy_Patrol : MonoBehaviour
     }
     public void CreateCoin()
     {
-        Instantiate(coinPrefab, targetPoint.position, targetPoint.rotation);
+        Instantiate(coinPrefab, itemSpawnPoint.position, Quaternion.identity);
     }
     
     private void Animations()

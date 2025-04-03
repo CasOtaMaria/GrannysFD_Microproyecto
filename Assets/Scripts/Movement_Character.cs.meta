@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: fb4cc1a01b0d0074fbe67220eaed32c6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - rbCharacter: {instanceID: 0}
+  - gameManager: {instanceID: 0}
+  - bulletsSpawn: {instanceID: 0}
+  - bulletsPrefab: {instanceID: 0}
+  - animator: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
