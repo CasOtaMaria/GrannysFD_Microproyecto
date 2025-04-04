@@ -23,7 +23,7 @@ public class Trap : MonoBehaviour
     void FallTrap()
     {
         //healthPlayer.TakeDamage(damageTrap);
-        //animator.SetBool("Fall", true);
+        animator.SetBool("Falls", true);
         Invoke("DecideOutcome", 0.5f);
 
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 71921d5175a73ff40afb99a11e5fd525
+guid: 363f8082490b32143aed71567e2ee7a2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638792084531093135
+  platformSettingsDirtyTick: 638794039555870130
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,7 +123,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: PruebaFondo
+  - name: Win_items_01
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 960
-      height: 540
-    spriteID: e535f7c856476c44a8d394a78a7ea660
+      width: 130
+      height: 220
+    spriteID: 105b59df497dab44db20a63dcee41995
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -145,7 +145,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: PruebaFondo_0
+  - name: Win_items_01
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -153,11 +153,53 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 0
-      y: 0
-      width: 960
-      height: 544
-    spriteID: 547372d11577c3f4284f082e62b33c2c
+      x: 4
+      y: 140
+      width: 116
+      height: 84
+    spriteID: 63e3279d0a2072b45b67fe28618b7dc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Win_items_02
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 60
+      width: 96
+      height: 68
+    spriteID: 145dae39801209b48b24c4844be59f70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Win_items_03
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 130
+      height: 44
+    spriteID: 9f5e100c0b4195f4d9ef6979cad35716
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -168,21 +210,21 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: -341139843
-    name: PruebaFondo
+    guid: 304552743
+    name: Win_items_01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: PruebaFondo
+    - name: Win_items_01
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 960
-        height: 540
-      spriteId: e535f7c856476c44a8d394a78a7ea660
+        width: 130
+        height: 220
+      spriteId: 105b59df497dab44db20a63dcee41995
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -201,7 +243,7 @@ ScriptedImporter:
   - name: DefaultTexturePlatform
     overridden: 0
     ignorePlatformSupport: 0
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 0
@@ -222,8 +264,8 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  generatePhysicsShape: 0
+  generatePhysicsShape: 1
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 960, y: 540}
-  previousTextureSize: {x: 1024, y: 1024}
+  canvasSize: {x: 130, y: 220}
+  previousTextureSize: {x: 256, y: 256}
