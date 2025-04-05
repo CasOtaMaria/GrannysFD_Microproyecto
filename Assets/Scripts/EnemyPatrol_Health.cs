@@ -5,6 +5,7 @@ public class EnemyPatrol_Health : MonoBehaviour
     public float maxHealth = 20f;
     public float health;
     public Enemy_Patrol enemyPatrol;
+    public SoundManager soundManager;
     
     void Start()
     {
@@ -14,9 +15,10 @@ public class EnemyPatrol_Health : MonoBehaviour
     {
         if (health > 0)
         {
+            soundManager.sfxSource.PlayOneShot(soundManager.shootClip);
             health -= damageTaken;
             health = Mathf.Max(health, 0);  //hago que la salud sea positiva (porque antes solo me salia neg)
-            Debug.Log("Salud restante: " + health);
+            Debug.Log("Salud restante: " + health);        
         }
         if (health <= 0)
         {

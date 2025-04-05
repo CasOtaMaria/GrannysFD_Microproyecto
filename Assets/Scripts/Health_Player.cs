@@ -7,8 +7,8 @@ public class Health_Player : MonoBehaviour
     public int health;
     public int maxHealth = 100;
     */
-    [SerializeField]
-    public IntSO healthSO;
+    [SerializeField] public IntSO healthSO;
+    public GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,9 +20,11 @@ public class Health_Player : MonoBehaviour
     {
         healthSO._value -= damageTaken;
         if (healthSO._value <= 0)
-        {
+        {       
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameManager.isDead=true;
             Destroy(gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("El jugador se ha muerto");
         }
     }
     public void TakeHealth(int healthTaken)

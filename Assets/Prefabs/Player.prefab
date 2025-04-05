@@ -328,9 +328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4cc1a01b0d0074fbe67220eaed32c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.5
   rbCharacter: {fileID: 1840866379590220486}
   gameManager: {fileID: 0}
+  soundManager: {fileID: 0}
   bulletsSpawn: {fileID: 7951948126131245933}
   bulletsPrefab: {fileID: 5397287127976055133, guid: 5fcc64cf6ce5a684498dc115fe724448, type: 3}
   bulletsSpeed: 10
@@ -348,8 +348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53e2cce166d5d045ad658358707f4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
+  healthSO: {fileID: 11400000, guid: 5e6e0c036e1a3a846a8f79235bca2ff8, type: 2}
+  gameManager: {fileID: 0}
 --- !u!114 &2546326328362241271
 MonoBehaviour:
   m_ObjectHideFlags: 0

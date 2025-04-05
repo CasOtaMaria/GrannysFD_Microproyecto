@@ -18,6 +18,7 @@ public class Enemy_Patrol : MonoBehaviour
     public Health_Player healthPlayer; //para poder acceder desde este codigo
 
     public Animator animator;
+    public SoundManager soundManager;
     
     void Start()
     {
@@ -43,6 +44,7 @@ public class Enemy_Patrol : MonoBehaviour
         if (collision.gameObject.tag == "Player") //Comprueba que choca con el jugador
         {
             healthPlayer.TakeDamage(damage);
+            soundManager.sfxSource.PlayOneShot(soundManager.damageClip);
         }
     }
     public void CreateCoin()

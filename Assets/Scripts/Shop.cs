@@ -17,10 +17,11 @@ public class Shop : MonoBehaviour
     private int numBullets02Shop = 1;
     private int numSpeedShop = 1;
 
-    //TEXTO TIENDA (CANTIDAD EN TIENDA)
+    [Header("----------SHOP QUANTITY----------")] //TEXTO TIENDA (CANTIDAD EN TIENDA)
     public TextMeshProUGUI numBullets01ShopT;
     public TextMeshProUGUI numBullets02ShopT;
-    //TEXTO JUGADOR (IU PRINCIPAL)
+
+    [Header("----------UI QUANTITY----------")] //TEXTO JUGADOR (IU PRINCIPAL)
     public TextMeshProUGUI numBullets01PlayerT;
     public TextMeshProUGUI numBullets02PlayerT;
     public TextMeshProUGUI numCandyPlayerT;

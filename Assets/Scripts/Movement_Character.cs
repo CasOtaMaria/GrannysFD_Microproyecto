@@ -7,6 +7,7 @@ public class Movement_Character : MonoBehaviour
     private Vector2 inputMov; //El movimiento del personaje sera 2D (ejes x,z)
 
     public GameManager gameManager;
+    public SoundManager soundManager;
 
     public Transform bulletsSpawn;
     public GameObject bulletsPrefab;
@@ -16,7 +17,6 @@ public class Movement_Character : MonoBehaviour
 
     public Animator animator;
     private bool moving;
-
     void Update()
     {
         //MOVEMENT
@@ -34,7 +34,7 @@ public class Movement_Character : MonoBehaviour
             if ((shootH != 0f || shootV != 0f) && Time.time > lastBullet + bulletDelay)
             {
                 Shoot(shootH, shootV);
-                lastBullet = Time.time;
+                lastBullet = Time.time;                
             }
         }       
         //ANIMATIONS
@@ -44,8 +44,9 @@ public class Movement_Character : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Coin"))
-        {
+        {         
             Destroy(other.gameObject);
+            soundManager.sfxSource.PlayOneShot(soundManager.coinClip);
             gameManager.coinCountSO._value++;
         }
         if (other.gameObject.CompareTag("KeyFruit"))

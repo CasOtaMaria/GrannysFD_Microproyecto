@@ -9,14 +9,14 @@ public class Doors : MonoBehaviour
     public GameObject instructionsUI;
     public GameManager gameManager;
 
-    //public Animator animator;
-    //bool isOpen = false;
+    public Animator animator;
+    bool isOpen = false;
 
     private bool playerInRange = false;
     private bool keyPressed = false;
 
-    public Camera cameraChange;
-    CameraManager cameraManager; 
+    public GameObject lockDoor;
+
     /*
     private void OnTriggerEnter(Collider collider)
     {
@@ -95,6 +95,7 @@ public class Doors : MonoBehaviour
     private void Start()
     {
         instructionsUI.SetActive(false);
+
     }
     void Update()
     {
@@ -105,14 +106,13 @@ public class Doors : MonoBehaviour
             TryOpen();
         }
     }
-
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
             Debug.Log("El jugador está en el rango de la puerta");
             instructionsUI.SetActive(true);
-            playerInRange = true;  // El jugador está en el rango
+            playerInRange = true;
         }
     }
     private void OnTriggerExit(Collider collider)
@@ -121,7 +121,7 @@ public class Doors : MonoBehaviour
         {
             Debug.Log("El jugador está fuera del rango de la puerta");
             instructionsUI.SetActive(false);
-            playerInRange = false;  // El jugador salió del rango
+            playerInRange = false;
             keyPressed = false;
         }
     }
@@ -132,24 +132,23 @@ public class Doors : MonoBehaviour
 
     void HasKey()
     {
-        // Comprobación de las llaves necesarias para abrir la puerta
         if (keyToOpen == 1 && gameManager.keyFruitSO._value > 0)
         {
             Debug.Log("Tienes la llave de fruta");
             DoorOpen();
-            gameManager.keyFruitSO._value--;
+            //gameManager.keyFruitSO._value--;
         }
         else if (keyToOpen == 2 && gameManager.keyFishSO._value > 0)
         {
             Debug.Log("Tienes la llave de pescado");
             DoorOpen();
-            gameManager.keyFishSO._value--;
+            //gameManager.keyFishSO._value--;
         }
         else if (keyToOpen == 3 && gameManager.keyMeatSO._value > 0)
         {
             Debug.Log("Tienes la llave de carne");
             DoorOpen();
-            gameManager.keyMeatSO._value--;
+            //gameManager.keyMeatSO._value--;
         }
         else
         {
@@ -160,14 +159,12 @@ public class Doors : MonoBehaviour
     void DoorOpen()
     {
         Debug.Log("Puerta abierta");
-        Destroy(gameObject);  // Destruye la puerta
+        animator.SetBool("isOpen", true);
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("OpenDoor"))
+        {
+            animator.SetTrigger("finishOpen");
+        }       
+        Destroy(lockDoor);  // destruye el bloqueo de la puerta
 
-
-        //Invoke("ChangeCamera", 1f);
     }
-    /*
-    public void ChangeCamera()
-    {
-        cameraManager.cameraUsing = cameraChange;
-    }*/
 }

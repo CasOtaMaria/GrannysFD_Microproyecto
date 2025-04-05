@@ -4,42 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("----------PLAYER AND UI----------")]
     public Movement_Character movementCharacter;
     public Health_Player healthPlayer;  
     public PauseMenu pauseMenu;
     public GameObject optionsMenu;
+    public GameObject deathScreen;
+    public SoundManager soundManager;
+    public bool isDead= false;
 
-    [SerializeField]
-    public FloatSO speedSO;
+    [SerializeField] public FloatSO speedSO;
 
-
-    //INVENTARIO
-    [SerializeField]
-        public IntSO coinCountSO; 
-    [SerializeField]
-        public IntSO numBul01SO;
-    [SerializeField]
-        public IntSO numBul02SO;
-    [SerializeField]
-        public IntSO numCandySO;
-    [SerializeField]
-        public IntSO numTeaSO;
-    //keys
-    [SerializeField]
-        public IntSO keyFruitSO;
-    [SerializeField]
-        public IntSO keyMeatSO;
-    [SerializeField]
-        public IntSO keyFishSO;
-    //public int numBullets01 = 0;
-    //public int numBullets02 = 0;
-    //public int numCandy = 0;
-    //public int numTea = 0;
-    //public int keyFruit = 0;
-    //public int keyFish = 0;
-    //public int keyMeat = 0;
-
-    //UPGRADES
+    [Header("----------INVENTORY----------")]
+    [SerializeField] public IntSO coinCountSO; 
+    [SerializeField] public IntSO numBul01SO;
+    [SerializeField] public IntSO numBul02SO;
+    [SerializeField] public IntSO numCandySO;
+    [SerializeField] public IntSO numTeaSO;
+    
+    [SerializeField] public IntSO keyFruitSO;
+    [SerializeField] public IntSO keyMeatSO;
+    [SerializeField] public IntSO keyFishSO;
+   
+    [Header("----------UPGRADES----------")] //UPGRADES
     public GameObject bullet01Prefab;
     public GameObject bullet02Prefab;
     //public float speedUpgrade = 5f;
@@ -47,6 +34,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         optionsMenu.SetActive(false);
+        deathScreen.SetActive(false);
     }
     void Update()
     {
@@ -58,8 +46,11 @@ public class GameManager : MonoBehaviour
         {
             UpgradeBullets();
         }
+        if (isDead == true)
+        {
+            GameOver();
+        }
     }
-
     public void UpgradeBullets()
     {
         movementCharacter.bulletsPrefab = bullet02Prefab;
@@ -67,6 +58,11 @@ public class GameManager : MonoBehaviour
     public void UpgradeSpeed()
     {
         speedSO._value = 5f;
+    }
+    public void GameOver()
+    {
+        soundManager.musicSource.Stop();
+        deathScreen.SetActive(true);
     }
     public void ResetDataSO()
     {
@@ -97,6 +93,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("K Meat reset to: " + keyFruitSO._value);
     }
 
-
+    //public int numBullets01 = 0;
+    //public int numBullets02 = 0;
+    //public int numCandy = 0;
+    //public int numTea = 0;
+    //public int keyFruit = 0;
+    //public int keyFish = 0;
+    //public int keyMeat = 0;
 }
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5edf14f9d254aae4ca6d25aff5587803
+guid: b289fb309273c3541a75c5f5c1bc14d8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -85,7 +85,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638772349276579626
+  platformSettingsDirtyTick: 638794792535864909
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Frame_0
+  - name: Mercaderes
     originalName: 
-    pivot: {x: 0.47222224, y: 0}
+    pivot: {x: 0.5, y: -0.16981132}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 72
-      height: 104
-    spriteID: f7e2245eaf18f0944bf6d46c21c03742
+      width: 184
+      height: 212
+    spriteID: c7ceec65dd9d1d046a9dde51f26a1e6f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,19 +144,20 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Frame_1
+  spriteSheetImportData:
+  - name: Mercaderes_0
     originalName: 
-    pivot: {x: 0.47222224, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 84
-      y: 4
-      width: 72
-      height: 104
-    spriteID: 463acf6971caa9a40858d0bef705c52f
+      x: 4
+      y: 116
+      width: 68
+      height: 96
+    spriteID: f723a19101676cf41bf9382d08bc1e1d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -164,20 +165,20 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
-  - name: Frame_2
+    uvTransform: {x: 0, y: 0}
+  - name: Mercaderes_1
     originalName: 
-    pivot: {x: 0.47222224, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 164
-      y: 4
-      width: 72
-      height: 104
-    spriteID: d2eb2d505eb5d8b4b86805d6508959e6
+      x: 112
+      y: 116
+      width: 76
+      height: 100
+    spriteID: c4f278a5dbff95d4395e65d66d6ef565
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -185,43 +186,66 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 164, y: 4}
-  spriteSheetImportData: []
+    uvTransform: {x: 0, y: 0}
+  - name: Mercaderes_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 68
+      height: 96
+    spriteID: d287f03b8490d874688acc3d3c841723
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Mercaderes_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 4
+      width: 68
+      height: 96
+    spriteID: e6e6bea994ba1af45b0173711cab2a3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 801193407
-    name: Abuela_anim_walk_s_2_01
+    guid: -1344267815
+    name: Mercaderes
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: Mercaderes
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 0
-        width: 72
-        height: 104
-      spriteId: f7e2245eaf18f0944bf6d46c21c03742
-    - name: Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 4
-        y: 0
-        width: 72
-        height: 104
-      spriteId: 463acf6971caa9a40858d0bef705c52f
-    - name: Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 4
-        y: 0
-        width: 72
-        height: 104
-      spriteId: d2eb2d505eb5d8b4b86805d6508959e6
+        x: 8
+        y: 36
+        width: 184
+        height: 212
+      spriteId: c7ceec65dd9d1d046a9dde51f26a1e6f
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -264,5 +288,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 76, y: 110}
-  previousTextureSize: {x: 256, y: 128}
+  canvasSize: {x: 200, y: 260}
+  previousTextureSize: {x: 256, y: 256}

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461fa5127ac631b468ea819f114a55de, type: 3}
   m_Name: CointCountSO
   m_EditorClassIdentifier: 
-  coinCount: 0
+  _value: 0
