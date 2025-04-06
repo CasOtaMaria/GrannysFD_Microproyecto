@@ -25,7 +25,9 @@ public class Movement_Character : MonoBehaviour
         inputMov.Normalize(); //Para que sea un vector unitario (que no aumente la velocidad al moverse en diagonal)
 
         rbCharacter.linearVelocity = new Vector3(inputMov.x*(gameManager.speedSO._value), 0f, inputMov.y* (gameManager.speedSO._value)); //0f porque no quiero que salte en ningún momento
-       
+
+        soundManager.walkingSource.Play();
+
         //SHOOTING
         if (gameManager.numBul01SO._value > 0)
         {

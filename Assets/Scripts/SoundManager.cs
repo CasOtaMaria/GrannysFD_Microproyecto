@@ -11,17 +11,22 @@ public class SoundManager : MonoBehaviour
     public AudioClip backgroundClip;
     public AudioClip coinClip;
     public AudioClip damageClip;
+    public AudioClip healthClip;
     public AudioClip shootClip;
     public AudioClip buttonClip;
+    public AudioClip walkingClip;
 
     void Start()
     {
         musicSource.gameObject.AddComponent<AudioSource>();
         sfxSource.gameObject.AddComponent<AudioSource>();
+        walkingSource.gameObject.AddComponent<AudioSource>();
 
         musicSource.loop = true;
         musicSource.clip = backgroundClip;
         musicSource.Play();
+
+        walkingSource.loop = true;
     }
 
 }

@@ -12,15 +12,16 @@ public class Health_Player : MonoBehaviour
         soundManager.sfxSource.PlayOneShot(soundManager.damageClip);
         healthSO._value -= damageTaken;
         if (healthSO._value <= 0)
-        {       
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            gameManager.isDead=true;
+        {
+            gameManager.isDead = true;
             //Destroy(gameObject);
+                     
             Debug.Log("El jugador se ha muerto");
         }
     }
     public void TakeHealth(int healthTaken)
     {
+        soundManager.sfxSource.PlayOneShot(soundManager.healthClip);
         if (healthSO._value + healthTaken > 100)
         {
             healthSO._value = 100;

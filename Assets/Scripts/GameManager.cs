@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         soundManager.musicSource.Stop();
+        soundManager.sfxSource.Stop();  
         deathScreen.SetActive(true);
     }
     public void Win()

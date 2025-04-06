@@ -829,8 +829,10 @@ MonoBehaviour:
   backgroundClip: {fileID: 8300000, guid: 7e3749dc945defb4d9ab2fda21644347, type: 3}
   coinClip: {fileID: 8300000, guid: 1ac75de144e990048b04002772d0a4cc, type: 3}
   damageClip: {fileID: 8300000, guid: c4005d80ed3169a4e99b8b6f26e3f2bb, type: 3}
+  healthClip: {fileID: 8300000, guid: f88b43fe6edb8454db64095a792c8aee, type: 3}
   shootClip: {fileID: 8300000, guid: 22c650f0331f0494cba1f3c359e44e94, type: 3}
   buttonClip: {fileID: 8300000, guid: 0da70b6e9c9526d4cb7d2b0c02591c08, type: 3}
+  walkingClip: {fileID: 8300000, guid: 0f84d9382df8fb044acb44665a8bd1bd, type: 3}
 --- !u!1 &562245702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2200147013717046410, guid: 57e785594e72d8f4ba92f63e7cb7b100, type: 3}
@@ -1577,6 +1579,10 @@ PrefabInstance:
     - target: {fileID: 9061160235458312311, guid: 55878d142323ef74685f48e7d512b988, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061160235458312311, guid: 55878d142323ef74685f48e7d512b988, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
       objectReference: {fileID: 0}
     - target: {fileID: 9061160235458312311, guid: 55878d142323ef74685f48e7d512b988, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -5926,7 +5932,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 501707759}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3358739085011553897, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2804694235768963681, guid: 7afb906cd64500945a1edbc720aa1044, type: 3}
       insertIndex: -1
@@ -6469,7 +6476,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
