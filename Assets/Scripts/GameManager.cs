@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         optionsMenu.SetActive(false);
         deathScreen.SetActive(false);
         winScreen.SetActive(false);
+
     }
     void Update()
     {
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
         {
             pauseMenu.PauseGame();
         }
-        if((numBul02SO._value>0)&& (numBul01SO._value > 0))
+        if ((numBul02SO._value>0)&& (numBul01SO._value > 0))
         {
             UpgradeBullets();
         }
@@ -118,15 +119,7 @@ public class GameManager : MonoBehaviour
         //WIN ITEMS
         fruitSO._value = 0;
         meatSO._value = 0;
-        fishSO._value = 1;
+        fishSO._value = 0;
     }
-
-    //public int numBullets01 = 0;
-    //public int numBullets02 = 0;
-    //public int numCandy = 0;
-    //public int numTea = 0;
-    //public int keyFruit = 0;
-    //public int keyFish = 0;
-    //public int keyMeat = 0;
 }
 

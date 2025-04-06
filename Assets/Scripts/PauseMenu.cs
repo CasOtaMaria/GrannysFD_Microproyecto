@@ -9,9 +9,12 @@ public class PauseMenu : MonoBehaviour
     public GameManager gameManager;
     bool pausa = false;
 
+    
+
     void Start()
     {       
         menuPausaUI.SetActive(false);
+       
     }
     public void PauseGame()
     {
@@ -54,4 +57,6 @@ public class PauseMenu : MonoBehaviour
     {
         soundManager.sfxSource.PlayOneShot(soundManager.buttonClip);
     }
+
+    
 }

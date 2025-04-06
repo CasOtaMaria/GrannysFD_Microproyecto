@@ -71,21 +71,4 @@ public class OpenShop : MonoBehaviour
             playerInRange = false;
         }
     }
-
-    /* //CODIGO ANTIGUO
-   private void OnTriggerEnter(Collider collider)
-   {
-       if (collider.gameObject.tag == "Player")
-       {
-           shop.SetActive(true);
-       }
-   }
-   private void OnTriggerExit(Collider collider)
-   {
-       if (collider.gameObject.tag == "Player")
-       {
-           shop.SetActive(false);
-       }
-   }
-   */
 }

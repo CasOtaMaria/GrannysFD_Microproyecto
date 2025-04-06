@@ -15,19 +15,51 @@ public class UI : MonoBehaviour
     public TextMeshProUGUI candy;
     public TextMeshProUGUI tea;
 
+    public Image fruitsIcon;
+    public Image fishIcon;
+    public Image meatIcon;
+
+
     void Start()
     {
-        //healthPlayer.healthSO._value = 100;
+        fruitsIcon.enabled = false;
+        fishIcon.enabled = false;
+        meatIcon.enabled = false;
     }
 
     void Update()
     {
-        healthText.text =healthPlayer.healthSO.Value+"" + "/" + 100;
-        //coinsText.text = inventoryPlayer.coinCountSO.ToString();
+        healthText.text =healthPlayer.healthSO.Value+"" + "/" + 100;      
         coinsText.text = gameManager.coinCountSO.Value+"";
 
         candy.text = gameManager.numCandySO._value.ToString(); //Accede a la cantidad de caramelos comprados en la tienda
         tea.text = gameManager.numTeaSO._value.ToString();  
+
+        if (gameManager.fruitSO._value > 0)
+        {
+            fruitsIcon.enabled = true;
+        }
+        else
+        {
+            fruitsIcon.enabled = false;
+        }
+        if (gameManager.fishSO._value > 0)
+        {
+            fishIcon.enabled = true;
+        }
+        else
+        {
+            fishIcon.enabled = false;
+        }
+        if (gameManager.meatSO._value > 0)
+        {
+            meatIcon.enabled = true;
+        }
+        else
+        {
+            meatIcon.enabled = false;
+        }
     }
+    
 
 }

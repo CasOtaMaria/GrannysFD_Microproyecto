@@ -13,13 +13,7 @@ public class Shop : MonoBehaviour
     private int costCandy = 1;
     private int costTea = 2;
     private int costSpeed = 5;
-
-    //CANTIDAD TIENDA
-    //private int numBullets01Shop = 1;
-    
-    //private int numBullets02Shop = 1;
-    //private int numSpeedShop = 1;
-    
+   
 
     [Header("----------SHOP QUANTITY----------")] //TEXTO TIENDA (CANTIDAD EN TIENDA)
     public TextMeshProUGUI numBullets01ShopT;
@@ -27,8 +21,6 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI numSpeedShopT;
 
     [Header("----------UI QUANTITY----------")] //TEXTO JUGADOR (IU PRINCIPAL)
-    //public TextMeshProUGUI numBullets01PlayerT;
-    //public TextMeshProUGUI numBullets02PlayerT;
     public TextMeshProUGUI numCandyPlayerT;
     public TextMeshProUGUI numTeaPlayerT;
 
@@ -46,22 +38,19 @@ public class Shop : MonoBehaviour
             gameManager.numBull1ShopQSO._value = 0;
             gameManager.numBul01SO._value= 1;
 
-            numBullets01ShopT.text = gameManager.numBull1ShopQSO._value.ToString(); //Cantidad tienda
-            //numBullets01PlayerT.text = gameManager.numBul01SO._value.ToString(); //Cantidad jugador
+            numBullets01ShopT.text = gameManager.numBull1ShopQSO._value.ToString(); //Cantidad tienda     
         }
     } 
     public void BuyBullets02()
     {
         if ((gameManager.coinCountSO._value >= costBullets02) && (gameManager.numBull2ShopQSO._value > 0))
         {
-            //gameManager.UpgradeBullets();
 
             gameManager.coinCountSO._value -= costBullets02;
             gameManager.numBull2ShopQSO._value = 0;
             gameManager.numBul02SO._value = 1;
 
             numBullets02ShopT.text = gameManager.numBull2ShopQSO._value.ToString(); //Cantidad tienda
-            //numBullets02PlayerT.text = gameManager.numBul02SO._value.ToString(); //Cantidad jugador
         }
     }
     public void BuyCandy()
@@ -70,8 +59,6 @@ public class Shop : MonoBehaviour
         {
             gameManager.coinCountSO._value -= costCandy;
             gameManager.numCandySO._value++;
-      
-            //numCandyPlayerT.text = numCandy.ToString(); //Cantidad jugador
         }
     }
     public void BuyTea()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Doors : MonoBehaviour
 {
@@ -19,81 +20,6 @@ public class Doors : MonoBehaviour
 
     public GameObject lockDoor;
 
-    /*
-    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.tag == "Player")
-        {
-            Debug.Log("El jugador esta en el rango de la puerta");
-            //instructionsUI.SetActive(true);
-            //playerInRange = true;
-            TryOpen();          
-        }
-    }
-    private void OnTriggerExit(Collider collider)
-    {
-        if (collider.gameObject.tag == "Player")
-        {
-            Debug.Log("El jugador esta fuera del rango de la puerta");
-            //instructionsUI.SetActive(false);
-                        //playerInRange = false;
-        }
-    }
-    void TryOpen()
-    {
-        //HasKey();
-
-        Debug.Log("Intenta abrirla");
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-           
-            /*
-            if (isOpen)
-            {
-                if (gameManager.HasKey(keyToOpen))
-                {
-                    DoorOpen();
-                }
-                else
-                {
-                    Debug.Log("I don't have the ticket for this...");
-                }
-            }*/
-    /*
-        }     
-    }
-    void HasKey()
-    {
-        if ((keyToOpen == 1) && (gameManager.keyFruit > 0))
-        {
-            Debug.Log("Tienes la llave");
-            DoorOpen();
-            gameManager.keyFruit--;           
-        }
-        if ((keyToOpen == 2) && (gameManager.keyFish > 0))
-        {
-            DoorOpen();
-            gameManager.keyFish--;
-        }
-        if ((keyToOpen == 3) && (gameManager.keyMeat > 0))
-        {
-            DoorOpen();
-            gameManager.keyMeat--;
-        }   
-    }
-    void DoorOpen()
-    {
-        //isOpen = true;
-        //animator.SetTrigger("Open");
-        //Invoke("DestroyDoor", 1.5f);    
-        DestroyDoor();
-    }
-
-    void DestroyDoor()
-    {
-        Destroy(gameObject);
-    }
-*/
     private void Start()
     {
         instructionsUI.SetActive(false);
@@ -106,7 +32,7 @@ public class Doors : MonoBehaviour
             Debug.Log("Intentando abrir la puerta");
             keyPressed = true;
             TryOpen();
-        }
+        }     
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -114,7 +40,7 @@ public class Doors : MonoBehaviour
         {
             Debug.Log("El jugador está en el rango de la puerta");
             instructionsUI.SetActive(true);
-            playerInRange = true;
+            playerInRange = true;           
         }
     }
     private void OnTriggerExit(Collider collider)

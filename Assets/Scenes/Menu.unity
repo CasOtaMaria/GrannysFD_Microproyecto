@@ -2700,7 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1241356358}
-  soundManager: {fileID: 0}
+  soundManager: {fileID: 2135315335}
 --- !u!1 &2091634870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,8 +3308,10 @@ MonoBehaviour:
   backgroundClip: {fileID: 0}
   coinClip: {fileID: 0}
   damageClip: {fileID: 0}
+  healthClip: {fileID: 0}
   shootClip: {fileID: 0}
   buttonClip: {fileID: 8300000, guid: 0da70b6e9c9526d4cb7d2b0c02591c08, type: 3}
+  walkingClip: {fileID: 0}
 --- !u!4 &2135315336
 Transform:
   m_ObjectHideFlags: 0
