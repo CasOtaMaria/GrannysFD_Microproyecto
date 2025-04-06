@@ -11,6 +11,7 @@ TagManager:
   - KeyMeat
   - KeyFish
   - TutorialShop
+  - WinShop
   layers:
   - Default
   - TransparentFX

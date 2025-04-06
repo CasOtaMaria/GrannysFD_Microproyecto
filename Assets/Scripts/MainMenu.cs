@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameManager gameManager;
+    public SoundManager soundManager;
 
     private void Start()
-    {
+    {     
         gameManager.ResetDataSO();
     }
     public void Play()
@@ -18,5 +19,9 @@ public class MainMenu : MonoBehaviour
     {
         gameManager.ResetDataSO();
         Application.Quit();
+    }
+    public void AudioOnClick()
+    {
+        soundManager.sfxSource.PlayOneShot(soundManager.buttonClip);
     }
 }

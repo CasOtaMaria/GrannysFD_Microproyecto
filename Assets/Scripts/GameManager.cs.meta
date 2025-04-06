@@ -1,2 +1,31 @@
 fileFormatVersion: 2
 guid: aab026f2a228d4d48bbfb3febd7c8d41
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - movementCharacter: {instanceID: 0}
+  - healthPlayer: {instanceID: 0}
+  - pauseMenu: {instanceID: 0}
+  - optionsMenu: {instanceID: 0}
+  - deathScreen: {instanceID: 0}
+  - soundManager: {instanceID: 0}
+  - speedSO: {fileID: 11400000, guid: 5a7e9657281658946bfe98f2042ea0f6, type: 2}
+  - coinCountSO: {fileID: 11400000, guid: 1e835c7add52a8a44840e8970ac65079, type: 2}
+  - numBul01SO: {fileID: 11400000, guid: 6c71f19ea85913942b7c695a5e853b37, type: 2}
+  - numBul02SO: {fileID: 11400000, guid: 1ca1a40115b66fc46927b0c88c611f9c, type: 2}
+  - numCandySO: {fileID: 11400000, guid: caae25f971308dc4b83dfdf387d68907, type: 2}
+  - numTeaSO: {fileID: 11400000, guid: 43a1968c259b46849a6b146ad58c4aa5, type: 2}
+  - keyFruitSO: {fileID: 11400000, guid: 4f208d97149e99b498dde65414c3e1a6, type: 2}
+  - keyMeatSO: {fileID: 11400000, guid: d8a5a4452339fc1499d13bc20b69af13, type: 2}
+  - keyFishSO: {fileID: 11400000, guid: 1216cb860e79f984dbab0cd6a7912291, type: 2}
+  - bullet01Prefab: {fileID: 5397287127976055133, guid: 5fcc64cf6ce5a684498dc115fe724448, type: 3}
+  - bullet02Prefab: {fileID: 5397287127976055133, guid: ba3dd5e491cc06144b3c8d61e5be65a4, type: 3}
+  - fruitSO: {fileID: 11400000, guid: 870520fc724d1944c8c56bcc3ae5e408, type: 2}
+  - meatSO: {fileID: 11400000, guid: 698a976e9b74d4840a2ba80b0132037c, type: 2}
+  - fishSO: {fileID: 11400000, guid: d3e9938947300e742a2b5ec5a8fa01ea, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

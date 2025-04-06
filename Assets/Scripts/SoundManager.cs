@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip coinClip;
     public AudioClip damageClip;
     public AudioClip shootClip;
+    public AudioClip buttonClip;
 
     void Start()
     {
@@ -23,9 +24,4 @@ public class SoundManager : MonoBehaviour
         musicSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

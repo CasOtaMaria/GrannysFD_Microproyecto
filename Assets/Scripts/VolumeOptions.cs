@@ -4,12 +4,10 @@ using UnityEngine.UI;
 public class VolumeOptions : MonoBehaviour
 {
     public Slider volumeSlider;
+    public SoundManager soundManager;
     public float sliderValue;
 
-    //public Slider sfxSlider;
-    //public float sfxSliderValue;
-
-    // public Image iconMuted; //para el icono de muted
+    public Image iconMuted; //para el icono de muted
 
     private void Start()
     {
@@ -28,12 +26,16 @@ public class VolumeOptions : MonoBehaviour
     {
         if (sliderValue == 0)
         {
-           // iconMuted.enabled = true;
+           iconMuted.enabled = true;
         }
         else
         {
-           // iconMuted.enabled = false;
+           iconMuted.enabled = false;
         }
        
+    }
+    public void AudioOnClick()
+    {
+        soundManager.sfxSource.PlayOneShot(soundManager.buttonClip);
     }
 }

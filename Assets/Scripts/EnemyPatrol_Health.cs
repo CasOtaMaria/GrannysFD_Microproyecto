@@ -6,7 +6,7 @@ public class EnemyPatrol_Health : MonoBehaviour
     public float health;
     public Enemy_Patrol enemyPatrol;
     public SoundManager soundManager;
-    
+
     void Start()
     {
         health = maxHealth;

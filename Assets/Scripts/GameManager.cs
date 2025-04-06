@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public PauseMenu pauseMenu;
     public GameObject optionsMenu;
     public GameObject deathScreen;
+    public GameObject winScreen;
     public SoundManager soundManager;
     public bool isDead= false;
 
@@ -25,16 +26,28 @@ public class GameManager : MonoBehaviour
     [SerializeField] public IntSO keyFruitSO;
     [SerializeField] public IntSO keyMeatSO;
     [SerializeField] public IntSO keyFishSO;
-   
+
+    [Header("----------TIENDA----------")]
+    [SerializeField] public IntSO numBull1ShopQSO;
+    [SerializeField] public IntSO numBull2ShopQSO;
+    [SerializeField] public IntSO speedShopQSO;
+
     [Header("----------UPGRADES----------")] //UPGRADES
+    public Shop shop;
     public GameObject bullet01Prefab;
     public GameObject bullet02Prefab;
     //public float speedUpgrade = 5f;
+
+    [Header("----------WIN ITEMS----------")]
+    [SerializeField] public IntSO fruitSO;
+    [SerializeField] public IntSO meatSO;
+    [SerializeField] public IntSO fishSO;
 
     private void Start()
     {
         optionsMenu.SetActive(false);
         deathScreen.SetActive(false);
+        winScreen.SetActive(false);
     }
     void Update()
     {
@@ -57,12 +70,16 @@ public class GameManager : MonoBehaviour
     }
     public void UpgradeSpeed()
     {
-        speedSO._value = 5f;
+        speedSO._value = 4.5f;
     }
     public void GameOver()
     {
         soundManager.musicSource.Stop();
         deathScreen.SetActive(true);
+    }
+    public void Win()
+    {
+        winScreen.SetActive(true);
     }
     public void ResetDataSO()
     {
@@ -91,6 +108,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("K Fish reset to: " + keyFruitSO._value);
         keyMeatSO._value = 0;
         Debug.Log("K Meat reset to: " + keyFruitSO._value);
+
+        //SHOP
+        speedShopQSO._value = 1;
+        numBull1ShopQSO._value = 1;
+        numBull2ShopQSO._value = 1;
+
+        //WIN ITEMS
+        fruitSO._value = 0;
+        meatSO._value = 0;
+        fishSO._value = 1;
     }
 
     //public int numBullets01 = 0;

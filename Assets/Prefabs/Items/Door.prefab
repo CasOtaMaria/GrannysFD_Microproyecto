@@ -52,6 +52,7 @@ MonoBehaviour:
   instructionsUI: {fileID: 8393936164702825989}
   gameManager: {fileID: 0}
   animator: {fileID: 3883420525527584368}
+  isFinalDoor: 0
   lockDoor: {fileID: 5647632146613159499}
 --- !u!65 &2269690500692607206
 BoxCollider:
@@ -387,7 +388,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -0.5}
-  m_LocalScale: {x: 0.14128913, y: 0.36444014, z: 0.15335901}
+  m_LocalScale: {x: 0.3, y: 0.7, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 450024506258942958}
@@ -436,7 +437,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 5265043421981426955, guid: 5ed1f05cce829584f9ecb87b512f55c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

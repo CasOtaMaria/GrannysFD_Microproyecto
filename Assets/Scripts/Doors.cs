@@ -7,10 +7,12 @@ public class Doors : MonoBehaviour
     //1 = fruit / 2=fish/3=meat
 
     public GameObject instructionsUI;
+    public GameObject winConditionUI;
     public GameManager gameManager;
 
     public Animator animator;
     bool isOpen = false;
+    public bool isFinalDoor = false;
 
     private bool playerInRange = false;
     private bool keyPressed = false;
@@ -95,7 +97,7 @@ public class Doors : MonoBehaviour
     private void Start()
     {
         instructionsUI.SetActive(false);
-
+        winConditionUI.SetActive(false);
     }
     void Update()
     {
@@ -121,13 +123,22 @@ public class Doors : MonoBehaviour
         {
             Debug.Log("El jugador está fuera del rango de la puerta");
             instructionsUI.SetActive(false);
+            winConditionUI.SetActive(false);
             playerInRange = false;
             keyPressed = false;
         }
     }
     void TryOpen()
     {
-        HasKey();
+        if (isFinalDoor == false)
+        {
+            HasKey();
+        }
+        else
+        {
+            HasFinalItems();
+        }
+        
     }
 
     void HasKey()
@@ -136,23 +147,31 @@ public class Doors : MonoBehaviour
         {
             Debug.Log("Tienes la llave de fruta");
             DoorOpen();
-            //gameManager.keyFruitSO._value--;
         }
         else if (keyToOpen == 2 && gameManager.keyFishSO._value > 0)
         {
             Debug.Log("Tienes la llave de pescado");
             DoorOpen();
-            //gameManager.keyFishSO._value--;
         }
         else if (keyToOpen == 3 && gameManager.keyMeatSO._value > 0)
         {
             Debug.Log("Tienes la llave de carne");
             DoorOpen();
-            //gameManager.keyMeatSO._value--;
         }
         else
         {
             Debug.Log("No tienes la llave correcta");
+        }
+    }
+    void HasFinalItems()
+    {
+        if (gameManager.fruitSO._value >0 && gameManager.meatSO._value > 0 && gameManager.fishSO._value > 0)
+        {
+            gameManager.Win();
+        }
+        else
+        {
+            winConditionUI.SetActive(true);
         }
     }
 

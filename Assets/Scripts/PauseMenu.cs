@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject menuPausaUI;
+    public SoundManager soundManager;
     public GameManager gameManager;
     bool pausa = false;
 
@@ -12,25 +13,6 @@ public class PauseMenu : MonoBehaviour
     {       
         menuPausaUI.SetActive(false);
     }
-    void Update()
-    {/*
-        Debug.Log("se inicia el update de pausa");
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("se ha presionado esc");
-            if (pausa)
-            {
-                PauseGame();           
-                Debug.Log("se ha pausado");              
-            }
-            else if (!pausa)
-            {
-                ResumeGame();
-            }
-        }*/
-        //LO HE COLOCADO EN EL GAME MANAGER
-    }
-    
     public void PauseGame()
     {
         Debug.Log("Se ha pausado el juego");
@@ -64,5 +46,9 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Se ha vuelto al menu principal");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
+    }
+    public void AudioOnClick()
+    {
+        soundManager.sfxSource.PlayOneShot(soundManager.buttonClip);
     }
 }

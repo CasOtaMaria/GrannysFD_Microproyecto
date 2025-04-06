@@ -44,7 +44,7 @@ public class Enemy_Patrol : MonoBehaviour
         if (collision.gameObject.tag == "Player") //Comprueba que choca con el jugador
         {
             healthPlayer.TakeDamage(damage);
-            soundManager.sfxSource.PlayOneShot(soundManager.damageClip);
+            //soundManager.sfxSource.PlayOneShot(soundManager.damageClip);
         }
     }
     public void CreateCoin()

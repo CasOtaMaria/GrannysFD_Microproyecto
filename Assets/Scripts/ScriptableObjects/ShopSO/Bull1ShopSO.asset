@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41bc76e89232794c8faa7e2d0a509d4, type: 3}
-  m_Name: SpeedSO
+  m_Script: {fileID: 11500000, guid: 461fa5127ac631b468ea819f114a55de, type: 3}
+  m_Name: Bull1ShopSO
   m_EditorClassIdentifier: 
-  _value: 3.5
+  _value: 1
